@@ -1,0 +1,88 @@
+/* Mediaciones Page Styles */
+.mediacionesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.introTextContainer {
+  padding: 1rem 0;
+}
+
+.introParagraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.imageGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.gridItem {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover {
+  transform: scale(1.02);
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.listContainer {
+  margin-top: 2rem;
+}
+
+.mediacionesList {
+  list-style-type: none;
+}
+
+.listItem {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .imageGridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .introParagraph {
+    font-size: 1rem;
+  }
+
+  .listItem {
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+}

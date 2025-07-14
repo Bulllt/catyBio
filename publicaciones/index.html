@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catherine Nuñez Flos</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./publicaciones.css" />
+  </head>
+
+  <body>
+    <header class="mainHeader">
+      <div class="headerContainer">
+        <div class="headerIcon">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="20" cy="20" r="18" stroke="black" stroke-width="2" />
+            <path
+              d="M12 28V12H16L20 20L24 12H28V28H24V18L20 26L16 18V28H12Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+
+        <h1 class="headerName">Catherine Nuñez Flos</h1>
+
+        <div class="mobileMenuToggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="mainContainer">
+      <nav class="sidebar" id="sidebar">
+        <ul class="sidebarList">
+          <li class="sidebarItem">
+            <a href="/" class="sidebarLink">Bio</a>
+          </li>
+          <li class="sidebarItem">
+            <a href="/mediaciones/" class="sidebarLink">Mediaciones</a>
+          </li>
+          <li class="sidebarItem">
+            <a href="/procesosFormativos/" class="sidebarLink"
+              >Procesos Formativos</a
+            >
+          </li>
+          <li class="sidebarItem">
+            <a href="/curadurias/" class="sidebarLink">Curadurias</a>
+          </li>
+          <li class="sidebarItem">
+            <a href="/trabajoArtistico/" class="sidebarLink"
+              >Trabajo Artístico</a
+            >
+          </li>
+          <li class="sidebarItem">
+            <a href="#publicaciones" class="sidebarLink active"
+              >Publicaciones</a
+            >
+          </li>
+          <li class="sidebarItem">
+            <a href="/contacto/" class="sidebarLink">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="mainContent">
+        <section class="publicacionesSection" id="publicaciones">
+          <div class="introTextContainer">
+            <p class="introParagraph">
+              Aquí puedes encontrar mis publicaciones académicas y artísticas
+              disponibles para descarga.
+            </p>
+          </div>
+
+          <div class="docsGridContainer">
+            <a
+              href="../assets/docs/Catálogo Postales Feministas - Catherine Núñez.pdf"
+              target="_blank"
+              class="docCard"
+            >
+              <div class="docThumbnail">
+                <img
+                  src="../assets/docs/thumbnails/thumb.jpg"
+                  alt="Miniatura Publicación 1"
+                  class="thumbnailImage"
+                />
+                <div class="pdfIcon">PDF</div>
+              </div>
+              <h3 class="docTitle">Catálogo Postales Feministas</h3>
+            </a>
+
+            <a
+              href="../assets/docs/Catálogo trama.pdf"
+              target="_blank"
+              class="docCard"
+            >
+              <div class="docThumbnail">
+                <img
+                  src="../assets/docs/thumbnails/thumb.jpg"
+                  alt="Miniatura Publicación 2"
+                  class="thumbnailImage"
+                />
+                <div class="pdfIcon">PDF</div>
+              </div>
+              <h3 class="docTitle">Catálogo Trama</h3>
+            </a>
+
+            <a
+              href="../assets/docs/Fotolibro.pdf"
+              target="_blank"
+              class="docCard"
+            >
+              <div class="docThumbnail">
+                <img
+                  src="../assets/docs/thumbnails/thumb.jpg"
+                  alt="Miniatura Publicación 3"
+                  class="thumbnailImage"
+                />
+                <div class="pdfIcon">PDF</div>
+              </div>
+              <h3 class="docTitle">Foto Libro</h3>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
