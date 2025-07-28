@@ -1,0 +1,116 @@
+.sectionTitle {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profileImageContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textSections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.leftTextSection,
+.rightTextSection {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.textSectionTitle {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+.textSectionContent p {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: justify;
+}
+
+.cvContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cvSection {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.cvSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cvSectionTitle {
+  margin-bottom: 0.75rem;
+}
+
+.cvList {
+  list-style: none;
+}
+
+.cvItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.cvItem:last-child {
+  margin-bottom: 0;
+}
+
+.cvYear {
+  margin-bottom: 0.25rem;
+}
+
+.cvDescription {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .textSections {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .profileImage {
+    max-width: 250px;
+  }
+
+  .cvItem {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftTextSection,
+  .rightTextSection {
+    padding: 1rem;
+  }
+
+  .profileImage {
+    max-width: 200px;
+  }
+}

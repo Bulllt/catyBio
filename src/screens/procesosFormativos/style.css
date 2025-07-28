@@ -1,0 +1,45 @@
+.procesosSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.introParagraph {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.introParagraph p {
+  color: #333;
+  text-align: justify;
+}
+
+.listContainer {
+  margin: 2rem 0;
+}
+
+.procesosList {
+  list-style-type: none;
+}
+
+.listItem {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .listItem {
+    padding: 0.8rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 1rem;
+  }
+}

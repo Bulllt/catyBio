@@ -1,0 +1,33 @@
+.sidebar {
+  width: 250px;
+  background-color: #e8e8e8;
+  padding: 2rem 0;
+  border-right: 1px solid #ddd;
+  position: sticky;
+  top: 80px;
+  height: 100vh - 80px;
+  overflow-y: auto;
+}
+
+.sidebarList {
+  list-style: none;
+}
+
+.sidebarItem {
+  margin-bottom: 0.5rem;
+}
+
+.sidebarLink {
+  display: block;
+  padding: 1rem 2rem;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebarLink:hover,
+.sidebarLink.active {
+  background-color: #d0d0d0;
+  border-left-color: #000;
+}

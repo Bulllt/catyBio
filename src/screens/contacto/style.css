@@ -1,0 +1,121 @@
+.contactoSection {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.introParagraph {
+  color: #333;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.inputError {
+  border: 1px solid #d32f2f !important;
+  transition: border-color 0.3s ease;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+  margin-top: 0;
+}
+
+.errorMessage.visible {
+  max-height: 50px;
+  opacity: 1;
+  margin-top: 0.25rem;
+}
+
+.submitButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.submitButton:hover {
+  background-color: #333;
+}
+
+.formStatus {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease-out,
+    padding 0.4s ease-out, margin 0.4s ease-out;
+  display: none;
+}
+
+.formStatus.success,
+.formStatus.error {
+  display: block;
+}
+
+.formStatus.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.formStatus.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .submitButton {
+    width: 100%;
+    align-self: auto;
+  }
+}
