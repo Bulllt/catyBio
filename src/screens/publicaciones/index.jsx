@@ -8,21 +8,21 @@ export default function Publicaciones() {
     {
       id: 1,
       title: "Catálogo Postales Feministas",
-      thumbnail: "/docs/1.jpg",
+      thumbnail: "/docs/postales feministas.jpg",
       pdfUrl:
         "https://drive.google.com/file/d/1d-2lF2WbeOxNGxxu6JUOO8MUQGoCRCZT/view?usp=drive_link",
     },
     {
       id: 2,
       title: "Catálogo Trama",
-      thumbnail: "/docs/2.jpg",
+      thumbnail: "/docs/catalogoTrama.jpg",
       pdfUrl:
         "https://drive.google.com/file/d/1QLvbiVIZI7FjtdvCe0qUW2UvwAUCQFeB/view?usp=drive_link",
     },
     {
       id: 3,
       title: "Foto Libro",
-      thumbnail: "/docs/3.jpg",
+      thumbnail: "/docs/fotolibro.jpg",
       pdfUrl:
         "https://drive.google.com/file/d/1vBUOC2XM4458t-Vsl9acTzC7LkjABPXr/view?usp=drive_link",
     },

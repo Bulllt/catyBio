@@ -87,14 +87,14 @@ export default function Curadurias() {
               </p>
               <p>
                 Conceptos que se abren en múltiples dimensiones tanto formales y
-                objetuales desplegando discursos poeticos, sentires, memorias
+                objetuales desplegando discursos poéticos, sentires, memorias
                 individuales y colectivas.
               </p>
               <p>
                 La selección de obras y artistas nos desembrollan diferentes
                 sentipensares del habitar y el cobijo que obtienen en los
                 espacios y la memoria: habitar en el consumo, en los recuerdos,
-                en la memoria historica, en los no lugares, en el hogar, en las
+                en la memoria histórica, en los no lugares, en el hogar, en las
                 calles donde transitamos, en el cariño y en el cuerpo.
               </p>
               <p className="artistsList">
@@ -116,20 +116,20 @@ export default function Curadurias() {
 
             <div className="exhibitionText">
               <p>
-                La exposición recoge la producción artistica individual para
-                poner en valor las miradas colectivas de discursos artisticos y
-                politicos. Diálogos entre artistas sobre sus inquietudes,
-                impulsos y cuestionamentios que divisaron una narración de
-                cruces y enlaces en común, impulsando la union y la red de arte
-                contemporaneo en la ciudad de Osorno. Cuatro artistas de la
+                La exposición recoge la producción artística individual para
+                poner en valor las miradas colectivas de discursos artísticos y
+                políticos. Diálogos entre artistas sobre sus inquietudes,
+                impulsos y cuestionamientos que divisaron una narración de
+                cruces y enlaces en común, impulsando la unión y la red de arte
+                contemporáneo en la ciudad de Osorno. Cuatro artistas de la
                 ciudad investigan y experimentan con medios y lenguajes
-                contemporaneo.
+                contemporáneos.
               </p>
               <p>
                 El corpus de selección de obras varía tanto en materialidad y
                 conceptos, la utilización de materiales de desecho, recolección
-                de materia orgánica, lecturas de la representación corportal
-                femenina, cartografias sociales e intentos de reconstruccón son
+                de materia orgánica, lecturas de la representación corporal
+                femenina, cartografías sociales e intentos de reconstrucción son
                 algunas de las propuestas que recogieron las y los artistas.
               </p>
               <p className="artistsList">

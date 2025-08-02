@@ -12,10 +12,6 @@
   padding-bottom: 0.5rem;
 }
 
-.introParagraph {
-  color: #333;
-}
-
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -27,10 +23,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.formGroup label {
-  color: #333;
 }
 
 .formGroup input,
@@ -71,7 +63,7 @@
 }
 
 .submitButton {
-  background-color: #000;
+  background-color: #2a49e0;
   color: white;
   border: none;
   padding: 1rem 2rem;

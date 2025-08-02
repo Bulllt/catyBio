@@ -1,37 +1,40 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./style.css";
 
 export default function Carousel({ images }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "center",
+    slidesToScroll: 1,
+  });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const autoPlayTimeoutRef = useRef(null);
-  const autoPlayIntervalRef = useRef(null);
-
-  const clearAutoPlay = () => {
-    if (autoPlayTimeoutRef.current) clearTimeout(autoPlayTimeoutRef.current);
-    if (autoPlayIntervalRef.current) clearInterval(autoPlayIntervalRef.current);
-  };
-
-  const startAutoPlay = useCallback(() => {
-    clearAutoPlay();
-
-    const play = () => {
-      if (emblaApi) {
-        emblaApi.scrollNext();
-      }
-    };
-
-    autoPlayTimeoutRef.current = setTimeout(() => {
-      play();
-      autoPlayIntervalRef.current = setInterval(play, 5000);
-    }, 5000);
-  }, [emblaApi]);
+  const [loadedImages, setLoadedImages] = useState([]);
 
   useEffect(() => {
-    startAutoPlay();
-    return () => clearAutoPlay();
-  }, [startAutoPlay]);
+    const loadImages = () => {
+      const newLoadedImages = [...loadedImages];
+      const indicesToLoad = [
+        selectedIndex,
+        (selectedIndex - 1 + images.length) % images.length,
+        (selectedIndex + 1) % images.length,
+      ];
+
+      indicesToLoad.forEach((index) => {
+        if (!newLoadedImages[index]) {
+          const img = new Image();
+          img.src = images[index].src;
+          img.onload = () => {
+            newLoadedImages[index] = true;
+            setLoadedImages([...newLoadedImages]);
+          };
+        }
+      });
+    };
+
+    loadImages();
+  }, [selectedIndex, images]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -45,35 +48,44 @@ export default function Carousel({ images }) {
     return () => emblaApi.off("select", onSelect);
   }, [emblaApi, onSelect]);
 
-  const scrollTo = useCallback(
-    (index) => {
-      if (emblaApi) {
-        emblaApi.scrollTo(index);
-        startAutoPlay();
-      }
-    },
-    [emblaApi, startAutoPlay]
-  );
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
 
   return (
-    <div className="carousel" ref={emblaRef}>
-      <div className="carouselContainer">
-        {images.map((image, index) => (
-          <div className="slide" key={index}>
-            <img src={image.src} alt={image.alt} className="slideImage" />
-          </div>
-        ))}
-      </div>
+    <div className="carouselContainer">
+      <div className="carousel" ref={emblaRef}>
+        <div className="imageContainer">
+          {images.map((image, index) => (
+            <div
+              className="slide"
+              key={index}
+              data-selected={index === selectedIndex}
+            >
+              {loadedImages[index] ? (
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="slideImage"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="imagePlaceholder" />
+              )}
+            </div>
+          ))}
+        </div>
 
-      <div className="dotsContainer">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${index === selectedIndex ? "active" : ""}`}
-            onClick={() => scrollTo(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+        <button className="carouselButton prev" onClick={scrollPrev}>
+          <FaChevronLeft />
+        </button>
+        <button className="carouselButton next" onClick={scrollNext}>
+          <FaChevronRight />
+        </button>
       </div>
     </div>
   );

@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Sidebar from "../../components/sidebar/index";
 import Carousel from "../../components/carousel";
 
 import "./style.css";
 
 export default function Mediaciones() {
+  const [showAll, setShowAll] = useState(false);
+  const [maxHeight, setMaxHeight] = useState("159px");
+  const listRef = useRef(null);
+
+  const allItems = [
+    "Taller Insectopedia: Insectos y Artes | Biblioteca Municipal de Purranque, 2025.",
+    "Día de Los Patrimonios | Archivo de La Unión, 2025.",
+    "Exposición Habitar: espacios y memorias | Corporación Cultural Osorno, 2022.",
+    "Exposición Vestuario y Patrimonio Teatro Municipal de Santiago | Corporación Cultural Osorno, 2021.",
+    "Taller mediación ROJO colaboración con Museo de la Solidaridad Salvador Allende | Corporación Cultural Osorno, 2021.",
+    "Exposición | Museo Interactivo Osorno, 2021.",
+    "Exposición Chilarte | Corporación Cultural Osorno, 2021.",
+    "Exposición Trama | Corporación Cultural Osorno, 2021.",
+    "Conversatorio Trama | Corporación Cultural Osorno, 2021.",
+  ];
+
+  useEffect(() => {
+    if (listRef.current) {
+      if (showAll) {
+        setMaxHeight(`${listRef.current.scrollHeight}px`);
+      } else {
+        const firstThreeHeight = Array.from(listRef.current.children)
+          .slice(0, 3)
+          .reduce((acc, child) => acc + child.offsetHeight, 0);
+        setMaxHeight(`${firstThreeHeight}px`);
+      }
+    }
+  }, [showAll, allItems]);
+
   const images = [
     {
       src: "/images/mediaciones/1.jpg",
@@ -52,39 +81,26 @@ export default function Mediaciones() {
           </p>
 
           <div className="listContainer">
-            <ul className="mediacionesList">
-              <li className="listItem">
-                Taller Insectopedia: Insectos y Artes | Biblioteca Municipal de
-                Purranque, 2025.
-              </li>
-              <li className="listItem">
-                Día de Los Patrimonios | Archivo de La Unión, 2025.
-              </li>
-              <li className="listItem">
-                Exposición Vestuario y Patrimonio Teatro Municipal de Santiago |
-                Corporación Cultural Osorno
-              </li>
-              <li className="listItem">
-                Taller mediación ROJO colaboración con Museo de la Solidaridad
-                Salvador Allende | Corporación Cultural Osorno, 2021.
-              </li>
-              <li className="listItem">
-                Exposición | Museo Interactivo Osorno, 2021.
-              </li>
-              <li className="listItem">
-                Exposición Habitar: espacios y memorias | Corporación Cultural
-                Osorno, 2021.
-              </li>
-              <li className="listItem">
-                Exposición Chilarte | Corporación Cultural Osorno, 2021.
-              </li>
-              <li className="listItem">
-                Exposición Trama | Corporación Cultural Osorno, 2021.
-              </li>
-              <li className="listItem">
-                Conversatorio Trama | Corporación Cultural Osorno, 2021.
-              </li>
+            <ul
+              className="mediacionesList"
+              ref={listRef}
+              style={{ maxHeight, overflow: "hidden" }}
+            >
+              {allItems.map((item, index) => (
+                <li key={index} className="listItem">
+                  {item}
+                </li>
+              ))}
             </ul>
+
+            {allItems.length > 3 && (
+              <button
+                className="showMoreButton"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? "Mostrar menos" : "Mostrar más"}
+              </button>
+            )}
           </div>
 
           <Carousel images={images} />

@@ -1,17 +1,33 @@
-.carousel {
-  overflow: hidden;
-  max-width: 100%;
+.carouselContainer {
+  position: relative;
+  max-width: 1200px;
   margin: 2rem auto;
+  padding: 0 2rem;
 }
 
-.carouselContainer {
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.imageContainer {
   display: flex;
+  padding: 0 40px;
 }
 
 .slide {
   position: relative;
-  min-width: 100%;
-  padding: 0 1rem;
+  min-width: 80%;
+  padding: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.slide[data-selected="true"] {
+  opacity: 1;
+}
+
+.slide:not([data-selected="true"]) {
+  opacity: 0.4;
 }
 
 .slideImage {
@@ -20,48 +36,49 @@
   max-height: 70vh;
   width: 100%;
   object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.dotsContainer {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  gap: 0.5rem;
+.imagePlaceholder {
+  width: 100%;
+  padding-bottom: 70%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #000;
-}
-
-.dot:hover {
-  background-color: #888;
-}
-
-.dot:focus {
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
-
-.carousel:hover::after {
-  content: "⏸";
+.carouselButton {
   position: absolute;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.carouselButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carouselButton.prev {
+  left: 10px;
+}
+
+.carouselButton.next {
   right: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 5px;
-  border-radius: 4px;
-  font-size: 1rem;
+}
+
+.carouselButton svg {
+  font-size: 1.2rem;
+  color: #333;
 }

@@ -47,12 +47,12 @@ export default function ProcesosFormativos() {
             </p>
             <p>
               Por otro lado, he impartido talleres de pintura al óleo para
-              personas adultas en la comuna de Puyehue. En ellos se han abordado
-              técnicas de dibujo utilizando materiales como el carboncillo y
-              lápices técnicos, trabajando aspectos como la perspectiva, el
-              encaje y la proporción. También se han explorado técnicas de
-              color, comprendiendo su manejo, variaciones tonales y usos
-              posibles dentro de la práctica pictórica.
+              adultos en la comuna de Puyehue. En ellos se han abordado técnicas
+              de dibujo utilizando materiales como el carboncillo y lápices
+              técnicos, trabajando aspectos como la perspectiva, el encaje y la
+              proporción. También se han explorado técnicas de color,
+              comprendiendo su manejo, variaciones tonales y usos posibles
+              dentro de la práctica pictórica.
             </p>
             <p>
               Estos procesos formativos al desarrollarse con cierta continuidad

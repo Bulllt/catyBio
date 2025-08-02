@@ -13,10 +13,6 @@
   padding: 1rem 0;
 }
 
-.introParagraph {
-  color: #333;
-}
-
 .docsGridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -82,7 +78,6 @@
   padding: 1rem;
   margin: 0;
   font-size: 1.1rem;
-  color: #333;
   text-align: center;
 }
 

@@ -5,7 +5,6 @@
 
 .introParagraph {
   line-height: 1.7;
-  color: #333;
   text-align: justify;
 }
 
@@ -15,25 +14,31 @@
 
 .mediacionesList {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.5s ease-in-out;
+  will-change: max-height;
 }
 
-.listItem {
-  padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
-  line-height: 1.6;
+.showMoreButton {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid #2a49e0;
+  color: #2a49e0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.listItem:last-child {
-  border-bottom: none;
+.showMoreButton:hover {
+  background-color: #2a49e0;
+  color: white;
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .listItem {
-    padding: 0.8rem 0;
-  }
-}
-
 @media (max-width: 480px) {
   .mainContent {
     padding: 1rem;

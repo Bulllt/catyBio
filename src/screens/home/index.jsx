@@ -16,23 +16,41 @@ export default function Home() {
 
               <div className="textSectionContent">
                 <p>
-                  Descripción profesional y personal aquí. Puedes hablar sobre
-                  tu experiencia, tus intereses, tu formación y lo que te
-                  apasiona en el mundo del arte y la cultura.
+                  Licenciada en Artes Visuales con Diplomado en Curaduría, y
+                  actualmente curso la Maestría en Gestión Cultural en la
+                  Universidad de Buenos Aires.
                 </p>
                 <p>
-                  Agrega más información relevante sobre tu trabajo, tu visión
-                  artística y los proyectos en los que has participado.
+                  Mi trabajo se ha desarrollado en torno a la curaduría, la
+                  gestión y coordinación de exposiciones, así como la mediación
+                  cultural, fomentando la participación activa de comunidades
+                  locales y fortaleciendo vínculos entre espacios culturales,
+                  educativos y sociales.
+                </p>
+                <p>
+                  Me interesa especialmente el cruce entre arte, educación y
+                  territorio. He realizado estudios de públicos, estrategias
+                  comunicacionales, registro fotográfico de actividades
+                  culturales y gestión de redes sociales para instituciones
+                  culturales y educativas. Estas experiencias me han permitido
+                  aportar a la creación de espacios de encuentro y reflexión
+                  colectiva.
+                </p>
+                <p>
+                  He impartido clases de artes visuales en contextos educativos
+                  y talleres de creación artística para infancias y personas
+                  adultas, principalmente en torno a la pintura al óleo. También
+                  he colaborado en montajes de exposiciones en galerías y
+                  festivales.
                 </p>
               </div>
             </div>
 
             <div className="rightTextSection">
-              <h3 className="textSectionTitle">CV</h3>
+              <h3 className="textSectionTitle">Formación</h3>
 
               <div className="cvContent">
                 <div className="cvSection">
-                  <h4 className="cvSectionTitle">Formación</h4>
                   <ul className="cvList">
                     <li className="cvItem">
                       <span className="cvYear">2016 - 2020</span>

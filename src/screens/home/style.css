@@ -1,21 +1,3 @@
-.sectionTitle {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.profileImageContainer {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.profileImage {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .textSections {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -39,7 +21,6 @@
 
 .textSectionContent p {
   margin-bottom: 1rem;
-  color: #333;
   text-align: justify;
 }
 
@@ -59,10 +40,6 @@
   padding-bottom: 0;
 }
 
-.cvSectionTitle {
-  margin-bottom: 0.75rem;
-}
-
 .cvList {
   list-style: none;
 }
@@ -70,7 +47,7 @@
 .cvItem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.75rem;
+  margin-bottom: 3rem;
   padding: 0.5rem;
   background-color: #f9f9f9;
   border-radius: 4px;
@@ -85,7 +62,6 @@
 }
 
 .cvDescription {
-  color: #555;
   font-size: 0.9rem;
 }
 

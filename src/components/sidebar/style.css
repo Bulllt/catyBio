@@ -3,14 +3,19 @@
   background-color: #e8e8e8;
   padding: 2rem 0;
   border-right: 1px solid #ddd;
-  position: sticky;
-  top: 80px;
-  height: 100vh - 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
 .sidebarList {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidebarItem {
@@ -20,14 +25,89 @@
 .sidebarLink {
   display: block;
   padding: 1rem 2rem;
-  color: #000;
+  color: #2a49e0;
   text-decoration: none;
   transition: background-color 0.3s ease;
   border-left: 3px solid transparent;
+  position: relative;
 }
 
 .sidebarLink:hover,
 .sidebarLink.active {
   background-color: #d0d0d0;
   border-left-color: #000;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar.collapsed .sidebarLink {
+  padding: 1rem;
+  text-align: center;
+}
+
+.sidebar.collapsed .sidebarLink .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  left: 70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .sidebarLink:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobileMenuButton {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  background: #e8e8e8;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contentMargin {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.contentMargin.collapsed {
+  margin-left: 60px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    padding-top: 5rem;
+  }
+
+  .sidebar.mobileOpen {
+    transform: translateX(0);
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .contentMargin {
+    margin-left: 0;
+  }
+
+  .contentMargin.collapsed {
+    margin-left: 0;
+  }
 }
