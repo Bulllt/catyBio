@@ -90,6 +90,8 @@ export default function Mediaciones() {
 
       <main className="mainContent">
         <section className="mediacionesSection" id="mediaciones">
+          <h2 className="sectionTitle">Mediaciones</h2>
+
           <p className="introParagraph">
             He desarrollado diversas mediaciones en instituciones culturales del
             sur de Chile, principalmente en la región de Los Lagos. En cada una

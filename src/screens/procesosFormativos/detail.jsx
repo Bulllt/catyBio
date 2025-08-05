@@ -34,8 +34,6 @@ export default function ProcesosFormativosDetail() {
         <button className="detailBackIcon" onClick={handleGoBack}>
           <FaArrowLeft />
         </button>
-
-        <div className="detailGradient" />
       </div>
 
       <div className="detailContent">

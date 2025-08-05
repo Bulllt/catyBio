@@ -1,7 +1,6 @@
 .detailContainer {
   position: relative;
   min-height: 100vh;
-  background-color: #f5f5f5;
 }
 
 .detailHero {
@@ -29,32 +28,27 @@
   transform: scale(1.1);
 }
 
-.detailGradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  background: linear-gradient(to bottom, transparent 0%, #f5f5f5 100%);
-}
-
 .detailContent {
   position: relative;
-  max-width: 800px;
-  margin: -100px auto 0;
+  margin: 0 auto;
   padding: 2rem;
-  background: white;
+  background: #f5f5f5;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
 }
 
 .detailTitle {
-  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.detailText {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .detailGridSection {
-  margin-top: 3rem;
-  width: 100%;
+  margin: 3rem auto 0;
+  max-width: 800px;
 }
 
 .detailGridContainer {

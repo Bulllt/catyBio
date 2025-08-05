@@ -1,11 +1,18 @@
 .mediacionesSection {
   display: flex;
   flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
 }
 
 .introParagraph {
   line-height: 1.7;
-  text-align: justify;
 }
 
 .listContainer {

@@ -52,6 +52,8 @@ export default function ProcesosFormativos() {
 
       <main className="mainContent">
         <section className="procesosSection" id="procesosFormativos">
+          <h2 className="sectionTitle">Procesos Formativos</h2>
+
           <div className="introParagraph">
             <p>
               He desarrollado procesos formativos dirigidos a diversos públicos,

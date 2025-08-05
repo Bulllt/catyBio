@@ -45,6 +45,8 @@ export default function Publicaciones() {
 
       <main className="mainContent">
         <section className="publicacionesSection" id="publicaciones">
+          <h2 className="sectionTitle">Publicaciones</h2>
+
           <div className="introTextContainer">
             <p className="introParagraph">
               Aquí puedes encontrar mis publicaciones académicas y artísticas

@@ -74,9 +74,9 @@ export default function Curadurias() {
       <main className="mainContent">
         <section className="curaduriasSection" id="curadurias">
           <div className="exhibitionItem">
-            <h3 className="exhibitionTitle">
+            <h2 className="sectionTitle">
               Habitar: espacios y memorias (2022)
-            </h3>
+            </h2>
 
             <div className="exhibitionText">
               <p>
@@ -110,9 +110,9 @@ export default function Curadurias() {
           </div>
 
           <div className="exhibitionItem">
-            <h3 className="exhibitionTitle">
+            <h2 className="sectionTitle">
               Trama: Revisión a cuatro artistas de la ciudad de Osorno (2021)
-            </h3>
+            </h2>
 
             <div className="exhibitionText">
               <p>

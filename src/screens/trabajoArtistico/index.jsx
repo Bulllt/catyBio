@@ -136,6 +136,8 @@ export default function TrabajoArtistico() {
 
       <main className="mainContent">
         <section className="trabajoArtisticoSection" id="trabajoArtistico">
+          <h2 className="sectionTitle">Trabajo Artístico</h2>
+
           <div className="listContainer">
             <ul
               className="list"
