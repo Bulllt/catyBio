@@ -7,10 +7,6 @@ export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
   const toggleMobileMenu = () => {
     setIsMobileOpen(!isMobileOpen);
   };

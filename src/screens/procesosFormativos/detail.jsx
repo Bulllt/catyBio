@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import ScrollToTop from "../../components/scrollToTop";
 
 import "./detail.css";
 
@@ -27,6 +28,8 @@ export default function ProcesosFormativosDetail() {
 
   return (
     <div className="detailContainer">
+      <ScrollToTop />
+
       <div
         className="detailHero"
         style={{ backgroundImage: `url(${item.image})` }}
