@@ -21,9 +21,90 @@
   list-style-type: none;
 }
 
+.processGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+.processGridItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.processGridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.processGridOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.processGridTitle {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.processGridItem:hover {
+  transform: scale(1.03);
+}
+
+.processGridItem:hover .processGridOverlay {
+  opacity: 1;
+}
+
+.processGridItem:hover .processGridImage {
+  transform: scale(1.1);
+}
+
 /* Responsive Adjustments */
+@media (max-width: 768px) {
+  .processGridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .processGridTitle {
+    font-size: 1rem;
+  }
+
+  .processModalTitle {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 480px) {
   .mainContent {
     padding: 1rem;
+  }
+
+  .processGridContainer {
+    grid-template-columns: 1fr;
   }
 }

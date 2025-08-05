@@ -36,28 +36,51 @@ export default function Mediaciones() {
 
   const images = [
     {
-      src: "/images/mediaciones/1.jpg",
-      alt: "Mediación 1",
+      image: "/images/mediaciones/1.jpg",
+      title:
+        "Exposición Vestuario y Patrimonio Teatro Municipal de Santiago | Corporación Cultural Osorno, 2021",
+      hover: true,
     },
     {
-      src: "/images/mediaciones/2.jpg",
-      alt: "Mediación 2",
+      image: "/images/mediaciones/2.jpg",
+      title:
+        "Exposición Vestuario y Patrimonio Teatro Municipal de Santiago | Corporación Cultural Osorno, 2021",
     },
     {
-      src: "/images/mediaciones/3.jpg",
-      alt: "Mediación 3",
+      image: "/images/mediaciones/3.jpg",
+      title:
+        "Taller mediación ROJO colaboración con Museo de la Solidaridad Salvador Allende | Corporación Cultural Osorno, 2021",
     },
     {
-      src: "/images/mediaciones/4.jpg",
-      alt: "Mediación 4",
+      image: "/images/mediaciones/4.jpg",
+      title:
+        "Exposición Habitar: espacios y memorias | Corporación Cultural Osorno, 2022",
     },
     {
-      src: "/images/mediaciones/5.jpg",
-      alt: "Mediación 5",
+      image: "/images/mediaciones/5.jpg",
+      title:
+        "Exposición Vestuario y Patrimonio Teatro Municipal de Santiago | Corporación Cultural Osorno, 2021",
     },
     {
-      src: "/images/mediaciones/6.jpg",
-      alt: "Mediación 6",
+      image: "/images/mediaciones/6.jpg",
+      title: "Exposición Chilarte | Corporación Cultural Osorno, 2021",
+    },
+    {
+      image: "/images/mediaciones/7.jpg",
+      title: " Exposición Chilarte | Corporación Cultural Osorno, 2021",
+    },
+    {
+      image: "/images/mediaciones/8.jpg",
+      title:
+        "Taller mediación ROJO colaboración con Museo de la Solidaridad Salvador Allende | Corporación Cultural Osorno, 2021",
+    },
+    {
+      image: "/images/mediaciones/9.jpg",
+      title: "Exposición Trama | Corporación Cultural Osorno, 2021",
+    },
+    {
+      image: "/images/mediaciones/10.jpg",
+      title: "Exposición Trama | Corporación Cultural Osorno, 2021",
     },
   ];
 

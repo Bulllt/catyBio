@@ -26,6 +26,13 @@ export default function Publicaciones() {
       pdfUrl:
         "https://drive.google.com/file/d/1vBUOC2XM4458t-Vsl9acTzC7LkjABPXr/view?usp=drive_link",
     },
+    {
+      id: 4,
+      title: "Guia Rápida Portafolio",
+      thumbnail: "/docs/guia.jpg",
+      pdfUrl:
+        "https://drive.google.com/file/d/1zeEk0_f9KZCwbRixCmd9G4FLGTWm4TTS/view?usp=drive_link",
+    },
   ];
 
   const handlePublicationClick = (pdfUrl) => {

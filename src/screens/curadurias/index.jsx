@@ -7,63 +7,63 @@ import "./style.css";
 export default function Curadurias() {
   const images1 = [
     {
-      src: "/images/espaciosYmemorias/1.jpg",
-      alt: "Mediación 1",
+      image: "/images/espaciosYmemorias/1.jpg",
+      title: "Mediación 1",
     },
     {
-      src: "/images/espaciosYmemorias/2.jpg",
-      alt: "Mediación 2",
+      image: "/images/espaciosYmemorias/2.jpg",
+      title: "Mediación 2",
     },
     {
-      src: "/images/espaciosYmemorias/3.jpg",
-      alt: "Mediación 3",
+      image: "/images/espaciosYmemorias/3.jpg",
+      title: "Mediación 3",
     },
     {
-      src: "/images/espaciosYmemorias/4.jpg",
-      alt: "Mediación 4",
+      image: "/images/espaciosYmemorias/4.jpg",
+      title: "Mediación 4",
     },
     {
-      src: "/images/espaciosYmemorias/5.jpg",
-      alt: "Mediación 5",
+      image: "/images/espaciosYmemorias/5.jpg",
+      title: "Mediación 5",
     },
     {
-      src: "/images/espaciosYmemorias/6.jpg",
-      alt: "Mediación 6",
+      image: "/images/espaciosYmemorias/6.jpg",
+      title: "Mediación 6",
     },
     {
-      src: "/images/espaciosYmemorias/7.jpg",
-      alt: "Mediación 6",
+      image: "/images/espaciosYmemorias/7.jpg",
+      title: "Mediación 6",
     },
     {
-      src: "/images/espaciosYmemorias/8.jpg",
-      alt: "Mediación 6",
+      image: "/images/espaciosYmemorias/8.jpg",
+      title: "Mediación 6",
     },
   ];
 
   const images2 = [
     {
-      src: "/images/trama/1.jpg",
-      alt: "Mediación 1",
+      image: "/images/trama/1.jpg",
+      title: "Mediación 1",
     },
     {
-      src: "/images/trama/2.jpg",
-      alt: "Mediación 2",
+      image: "/images/trama/2.jpg",
+      title: "Mediación 2",
     },
     {
-      src: "/images/trama/3.jpg",
-      alt: "Mediación 3",
+      image: "/images/trama/3.jpg",
+      title: "Mediación 3",
     },
     {
-      src: "/images/trama/4.jpg",
-      alt: "Mediación 4",
+      image: "/images/trama/4.jpg",
+      title: "Mediación 4",
     },
     {
-      src: "/images/trama/5.jpg",
-      alt: "Mediación 5",
+      image: "/images/trama/5.jpg",
+      title: "Mediación 5",
     },
     {
-      src: "/images/trama/6.jpg",
-      alt: "Mediación 6",
+      image: "/images/trama/6.jpg",
+      title: "Mediación 6",
     },
   ];
 

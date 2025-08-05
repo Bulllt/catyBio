@@ -1,0 +1,114 @@
+.detailContainer {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.detailHero {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.detailBackIcon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #2a49e0;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detailBackIcon:hover {
+  transform: scale(1.1);
+}
+
+.detailGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent 0%, #f5f5f5 100%);
+}
+
+.detailContent {
+  position: relative;
+  max-width: 800px;
+  margin: -100px auto 0;
+  padding: 2rem;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.detailTitle {
+  margin-bottom: 1.5rem;
+}
+
+.detailGridSection {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.detailGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.detailGridItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+}
+
+.detailGridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .detailHero {
+    height: 60vh;
+  }
+
+  .detailContent {
+    margin: -80px 1rem 0;
+    padding: 1.5rem;
+  }
+
+  .detailTitle {
+    font-size: 1.5rem;
+  }
+
+  .detailGridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .detailGridTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailGridContainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .detailGridTitle {
+    font-size: 1.2rem;
+  }
+}
