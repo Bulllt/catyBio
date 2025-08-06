@@ -23,6 +23,7 @@ export default function ProcesosFormativos() {
         "/images/procesosFormativos/tallerArte/3.jpg",
         "/images/procesosFormativos/tallerArte/4.jpg",
         "/images/procesosFormativos/tallerArte/5.jpg",
+        "/images/procesosFormativos/tallerArte/6.jpg",
       ],
     },
     {
@@ -38,6 +39,9 @@ export default function ProcesosFormativos() {
         "/images/procesosFormativos/tallerOleo/3.jpg",
         "/images/procesosFormativos/tallerOleo/4.jpg",
         "/images/procesosFormativos/tallerOleo/5.jpg",
+        "/images/procesosFormativos/tallerOleo/6.jpg",
+        "/images/procesosFormativos/tallerOleo/7.jpg",
+        "/images/procesosFormativos/tallerOleo/8.jpg",
       ],
     },
   ];

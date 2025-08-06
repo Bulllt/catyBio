@@ -82,6 +82,16 @@ export default function Mediaciones() {
       image: "/images/mediaciones/10.jpg",
       title: "Exposición Trama | Corporación Cultural Osorno, 2021",
     },
+    {
+      image: "/images/mediaciones/11.jpg",
+      title:
+        "Taller Insectopedia: Insectos y Artes | Biblioteca Municipal de Purranque, 2025",
+    },
+    {
+      image: "/images/mediaciones/12.jpg",
+      title:
+        "Taller Insectopedia: Insectos y Artes | Biblioteca Municipal de Purranque, 2025",
+    },
   ];
 
   return (

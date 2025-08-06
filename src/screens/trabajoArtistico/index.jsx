@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import Sidebar from "../../components/sidebar/index";
+import Grid from "./grid";
 
 import "./style.css";
 
@@ -39,96 +38,141 @@ export default function TrabajoArtistico() {
     }
   }, [showAll, allItems]);
 
-  const images = [
+  const drawings = [
     {
       title: "120, lápices de colores",
-      image: "/images/trabajoArtistico/grid/1.jpg",
+      image: "/images/trabajoArtistico/drawings/1.jpg",
     },
     {
       title: "Autorretrato, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/2.jpg",
+      image: "/images/trabajoArtistico/drawings/2.jpg",
     },
     {
       title: "Chispita, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/3.jpg",
+      image: "/images/trabajoArtistico/drawings/3.jpg",
     },
     {
       title: "Gustavo, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/4.jpg",
+      image: "/images/trabajoArtistico/drawings/4.jpg",
     },
     {
       title: "Iñaki, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/5.jpg",
+      image: "/images/trabajoArtistico/drawings/5.jpg",
     },
     {
       title: "Ivanna, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/6.jpg",
+      image: "/images/trabajoArtistico/drawings/6.jpg",
     },
     {
       title: "Mariana, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/7.jpg",
+      image: "/images/trabajoArtistico/drawings/7.jpg",
     },
     {
       title: "Valentina, grafito sobre papel",
-      image: "/images/trabajoArtistico/grid/8.jpg",
+      image: "/images/trabajoArtistico/drawings/8.jpg",
     },
     {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/1.jpg",
+      title: "Autorretrato, técnica mixta (grafito, acrílico)",
+      image: "/images/trabajoArtistico/drawings/9.jpg",
     },
     {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/2.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/3.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/4.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/5.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/6.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/7.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/8.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/9.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/10.jpg",
-    },
-    {
-      title: "Trabajo Artístico",
-      image: "/images/trabajoArtistico/carousel/11.jpg",
+      title: "Pucatrihue, grafito sobre papel",
+      image: "/images/trabajoArtistico/drawings/10.jpg",
     },
   ];
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const engravings = [
+    {
+      title: "Efe, taco perdido",
+      image: "/images/trabajoArtistico/engravings/1.jpg",
+    },
+    {
+      title: "real, xilografía sobre fotografía",
+      image: "/images/trabajoArtistico/engravings/2.jpg",
+    },
+    {
+      title: "sin título, detalles",
+      image: "/images/trabajoArtistico/engravings/3.jpg",
+    },
+    {
+      title: "sin titulo, grabado en tetrapack",
+      image: "/images/trabajoArtistico/engravings/4.jpg",
+    },
+    {
+      title: "sin título, grabado sobre tela",
+      image: "/images/trabajoArtistico/engravings/5.jpg",
+    },
+    {
+      title: "sin título, punta seca",
+      image: "/images/trabajoArtistico/engravings/6.jpg",
+    },
+    {
+      title: "sin título, taco perdido en tríptico",
+      image: "/images/trabajoArtistico/engravings/7.jpg",
+    },
+    {
+      title: "Valpo 02, Agua fuerte",
+      image: "/images/trabajoArtistico/engravings/8.jpg",
+    },
+    {
+      title: "Valpo 03, Agua fuerte tinta azul",
+      image: "/images/trabajoArtistico/engravings/9.jpg",
+    },
+    {
+      title: "Valpo 03, Agua fuerte tinta violeta",
+      image: "/images/trabajoArtistico/engravings/10.jpg",
+    },
+  ];
 
-  const openModal = (image) => {
-    setSelectedImage(image);
-    document.body.style.overflow = "hidden";
-  };
+  const paints = [
+    {
+      title: "Bodegón contemporáneo",
+      image: "/images/trabajoArtistico/paints/1.jpg",
+    },
+    {
+      title:
+        "Las Meninas obra colectiva donada al hospital base de Valdivia, 2017",
+      image: "/images/trabajoArtistico/paints/2.jpg",
+    },
+    {
+      title: "Pepinillos, acuarela",
+      image: "/images/trabajoArtistico/paints/3.jpg",
+    },
+    {
+      title: "sin título, pigmentos naturales sobre papel",
+      image: "/images/trabajoArtistico/paints/4.jpg",
+    },
+  ];
 
-  const closeModal = () => {
-    setSelectedImage(null);
-    document.body.style.overflow = "auto";
-  };
+  const exposition = [
+    {
+      title:
+        "Expositora en XVI Jornadas Estudios e Investigaciones Arte e ideología del Instituto  de Teoría e Historia del Arte “Julio E. Payró”, Facultad de Filosofía y Letras, UBA.  (2024)",
+      image: "/images/trabajoArtistico/exposition/1.jpg",
+    },
+    {
+      title:
+        "Juntas dar la vuelta (2022) exposición colectiva curada por Valentina Inostroza, se realizó en Casa Prochelle desde el 18 de octubre al 5 noviembre del 2022",
+      image: "/images/trabajoArtistico/exposition/2.jpg",
+    },
+    {
+      title:
+        "Participe exposición colectiva Costuras Interdisciplinarias en Museo de Arte Contemporáneo Valdivia (2018)",
+      image: "/images/trabajoArtistico/exposition/3.jpg",
+    },
+    {
+      title:
+        "Participe exposición colectiva Costuras Interdisciplinarias en Museo de Arte Contemporáneo Valdivia (2018)",
+      image: "/images/trabajoArtistico/exposition/4.jpg",
+    },
+  ];
+
+  const photographs = [
+    {
+      title: "Osorno, fotografía",
+      image: "/images/trabajoArtistico/photographs/1.jpg",
+    },
+  ];
 
   return (
     <div className="mainContainer">
@@ -161,44 +205,20 @@ export default function TrabajoArtistico() {
             )}
           </div>
 
-          <div className="artisticGridContainer">
-            {images.map((item, index) => (
-              <div
-                key={index}
-                className="artisticGridItem"
-                onClick={() => openModal(item)}
-              >
-                <LazyLoadImage
-                  src={item.image}
-                  alt={item.title}
-                  className="artisticGridImage"
-                  effect="blur"
-                />
-                <div className="artisticGridOverlay">
-                  <h3 className="artisticGridTitle">{item.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
+          <h3 className="artisticSubtitleFirst">Dibujo</h3>
+          <Grid images={drawings} />
 
-          {selectedImage && (
-            <div className="artisticModalOverlay" onClick={closeModal}>
-              <div
-                className="artisticModalContent"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button className="artisticModalClose" onClick={closeModal}>
-                  &times;
-                </button>
-                <img
-                  src={selectedImage.image}
-                  alt={selectedImage.title}
-                  className="artisticModalImage"
-                />
-                <h2 className="artisticModalTitle">{selectedImage.title}</h2>
-              </div>
-            </div>
-          )}
+          <h3 className="artisticSubtitle">Grabado</h3>
+          <Grid images={engravings} />
+
+          <h3 className="artisticSubtitle">Pintura</h3>
+          <Grid images={paints} />
+
+          <h3 className="artisticSubtitle">Participación en Exposiciones</h3>
+          <Grid images={exposition} />
+
+          <h3 className="artisticSubtitle">Fotografía</h3>
+          <Grid images={photographs} />
         </section>
       </main>
     </div>
