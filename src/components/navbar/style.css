@@ -29,6 +29,9 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .navbarContainer {
+    margin-left: 0;
+  }
+  .headerName {
     margin-left: 25px;
   }
 }

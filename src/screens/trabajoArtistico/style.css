@@ -130,12 +130,12 @@
 
 .artisticModalContent {
   position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 95vw;
+  max-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 80px;
+  width: 100%;
 }
 
 .artisticModalImage {
@@ -223,8 +223,20 @@
   }
 
   .artisticModalNav {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .artisticModalNavPrev {
+    left: -20px;
+  }
+
+  .artisticModalNavNext {
+    right: -20px;
+  }
+
+  .artisticModalNav svg {
+    font-size: 1rem;
   }
 }
 
