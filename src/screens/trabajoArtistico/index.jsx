@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Sidebar from "../../components/sidebar/index";
-import Grid from "./grid";
+import Grid from "../../components/grid/index";
 
 import "./style.css";
 

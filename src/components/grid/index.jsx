@@ -50,38 +50,38 @@ export default function Grid({ images }) {
 
   return (
     <>
-      <div className="artisticGridContainer">
+      <div className="gridComponent">
         {images.map((item, index) => (
           <div
             key={index}
-            className="artisticGridItem"
+            className="gridComponentItem"
             onClick={() => openModal(item, index)}
           >
             <LazyLoadImage
               src={item.image}
               alt={item.title}
-              className="artisticGridImage"
+              className="gridComponentImage"
               effect="blur"
             />
-            <div className="artisticGridOverlay">
-              <h3 className="artisticGridTitle">{item.title}</h3>
+            <div className="gridComponentOverlay">
+              <h3 className="gridComponentTitle">{item.title}</h3>
             </div>
           </div>
         ))}
       </div>
 
       {selectedImage && (
-        <div className="artisticModalOverlay" onClick={closeModal}>
+        <div className="gridComponentModalOverlay" onClick={closeModal}>
           <div
-            className="artisticModalContent"
+            className="gridComponentModalContent"
             onClick={(e) => e.stopPropagation()}
           >
-            <button className="artisticModalClose" onClick={closeModal}>
+            <button className="gridComponentModalClose" onClick={closeModal}>
               <FaTimes />
             </button>
 
             <button
-              className="artisticModalNav artisticModalNavPrev"
+              className="gridComponentModalNav gridComponentModalNavPrev"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImages("prev");
@@ -92,10 +92,10 @@ export default function Grid({ images }) {
             <img
               src={selectedImage.image}
               alt={selectedImage.title}
-              className="artisticModalImage"
+              className="gridComponentModalImage"
             />
             <button
-              className="artisticModalNav artisticModalNavNext"
+              className="gridComponentModalNav gridComponentModalNavNext"
               onClick={(e) => {
                 e.stopPropagation();
                 navigateImages("next");
@@ -104,7 +104,7 @@ export default function Grid({ images }) {
               <FaChevronRight />
             </button>
 
-            <h2 className="artisticModalTitle">{selectedImage.title}</h2>
+            <h2 className="gridComponentModalTitle">{selectedImage.title}</h2>
           </div>
         </div>
       )}

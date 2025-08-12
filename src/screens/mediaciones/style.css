@@ -46,6 +46,14 @@
   color: white;
 }
 
+.mediacionesSubtitleFirst {
+  margin-top: 2rem;
+}
+
+.mediacionesSubtitle {
+  margin-top: 5rem;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 480px) {
   .mainContent {
