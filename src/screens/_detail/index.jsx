@@ -5,17 +5,17 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import ScrollToTop from "../../components/scrollToTop";
 
-import "./detail.css";
+import "./style.css";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 
-export default function ProcesosFormativosDetail() {
+export default function Detail() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { item } = state || {};
 
   useEffect(() => {
     if (!item) {
-      navigate("/procesosFormativos", { replace: true });
+      navigate(-1, { replace: true });
     }
   }, [item, navigate]);
 

@@ -7,11 +7,12 @@ import Layout from "./Layout.jsx";
 import Home from "../screens/home/index.jsx";
 import Mediaciones from "../screens/mediaciones/index.jsx";
 import ProcesosFormativos from "../screens/procesosFormativos/index.jsx";
-import ProcesosFormativosDetalle from "../screens/procesosFormativos/detail.jsx";
 import Curadurias from "../screens/curadurias/index.jsx";
 import TrabajoArtistico from "../screens/trabajoArtistico/index.jsx";
 import Publicaciones from "../screens/publicaciones/index.jsx";
 import Contacto from "../screens/contacto/index.jsx";
+
+import Detail from "../screens/_detail/index.jsx";
 
 export default function App() {
   return (
@@ -26,10 +27,9 @@ export default function App() {
           <Route path="/publicaciones" element={<Publicaciones />} />
           <Route path="/contacto" element={<Contacto />} />
         </Route>
-        <Route
-          path="/procesosFormativos/detalle"
-          element={<ProcesosFormativosDetalle />}
-        />
+
+        <Route path="/procesosFormativos/detalle" element={<Detail />} />
+        <Route path="/mediaciones/detalle" element={<Detail />} />
       </Routes>
     </Router>
   );
