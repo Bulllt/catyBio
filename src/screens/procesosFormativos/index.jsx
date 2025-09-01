@@ -42,6 +42,7 @@ export default function ProcesosFormativos() {
         "/images/procesosFormativos/tallerOleo/6.jpg",
         "/images/procesosFormativos/tallerOleo/7.jpg",
         "/images/procesosFormativos/tallerOleo/8.jpg",
+        "/images/procesosFormativos/tallerOleo/9.jpg",
       ],
     },
   ];
