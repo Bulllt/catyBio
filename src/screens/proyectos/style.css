@@ -42,6 +42,11 @@
   margin: 0;
 }
 
+.listItemSecond {
+  padding: 0.7rem;
+  font-size: 0.8rem;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 480px) {
   .mainContent {

@@ -90,19 +90,19 @@ export default function Proyectos() {
 
             <div className="exhibitionText">
               <ul className="projectsList" style={{ overflow: "hidden" }}>
-                <li className="listItem">
+                <li className="listItemSecond">
                   <strong>Estado:</strong> Admisible / Seleccionado
                 </li>
-                <li className="listItem">
+                <li className="listItemSecond">
                   <strong>Folio:</strong> 826731
                 </li>
-                <li className="listItem">
+                <li className="listItemSecond">
                   <strong>Fondo:</strong> Fondart Regional – Línea Difusión
                 </li>
-                <li className="listItem">
+                <li className="listItemSecond">
                   <strong>Modalidad:</strong> Difusión / Única
                 </li>
-                <li className="listItem">
+                <li className="listItemSecond">
                   <strong>Región:</strong> Los Lagos
                 </li>
               </ul>
