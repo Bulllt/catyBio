@@ -5,7 +5,7 @@
 
 .mainContent {
   padding: 3rem 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -13,39 +13,22 @@
   width: 100%;
 }
 
-.textSections {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
-}
-
-.leftTextSection,
-.rightTextSection {
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
-}
-
-.leftTextSection:hover,
-.rightTextSection:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+.profileSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .profileImageContainer {
-  text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .profileImage {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #e8e8e8;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 5px solid #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
 }
 
@@ -53,39 +36,73 @@
   transform: scale(1.05);
 }
 
-.textSectionTitle {
+.mainTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.bioSection {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.bioSection:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.bioContent {
+  line-height: 1.8;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bioContent p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.bioContent p:last-child {
+  margin-bottom: 0;
+}
+
+.twoColumnGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.sectionCard {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.sectionCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.sectionTitle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1a1a1a;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 3px solid #2a49e0;
   text-align: center;
 }
 
-.textSectionContent {
-  line-height: 1.7;
-  color: #333;
-}
-
-.textSectionContent p {
-  margin-bottom: 1.25rem;
-  text-align: justify;
-  font-size: 0.95rem;
-}
-
-.textSectionContent p:last-child {
-  margin-bottom: 0;
-}
-
 .cvContent {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.cvSection {
-  position: relative;
 }
 
 .cvList {
@@ -107,7 +124,7 @@
 .cvItem {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding: 1.25rem;
   background-color: #fafafa;
   border-radius: 8px;
@@ -127,6 +144,7 @@
   border-radius: 50%;
   border: 3px solid #fff;
   box-shadow: 0 0 0 2px #2a49e0;
+  z-index: 1;
 }
 
 .cvItem:hover {
@@ -148,6 +166,15 @@
   line-height: 1.4;
 }
 
+.cvYear {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2a49e0;
+  letter-spacing: 0.5px;
+}
+
 .cvDescription {
   display: block;
   font-size: 0.9rem;
@@ -159,77 +186,84 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .mainContent {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
-  .textSections {
+  .twoColumnGrid {
     gap: 2rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .mainContent {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
 
-  .textSections {
+  .twoColumnGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .leftTextSection,
-  .rightTextSection {
+  .profileImage {
+    width: 160px;
+    height: 160px;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .bioSection {
     padding: 2rem 1.5rem;
   }
 
-  .profileImage {
-    width: 150px;
-    height: 150px;
+  .sectionCard {
+    padding: 1.75rem 1.5rem;
   }
 
-  .textSectionTitle {
+  .sectionTitle {
     font-size: 1.35rem;
   }
 
-  .cvItem {
-    padding: 1rem;
-  }
-
-  .cvList {
-    padding-left: 1.25rem;
-  }
-
-  .cvItem::before {
-    left: -1.625rem;
+  .bioContent p {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
   .mainContent {
-    padding: 1rem 0.75rem;
+    padding: 1.5rem 0.75rem;
   }
 
-  .leftTextSection,
-  .rightTextSection {
+  .profileImage {
+    width: 140px;
+    height: 140px;
+    border-width: 4px;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .bioSection {
     padding: 1.5rem 1.25rem;
     border-radius: 8px;
   }
 
-  .profileImage {
-    width: 130px;
-    height: 130px;
+  .sectionCard {
+    padding: 1.5rem 1.25rem;
+    border-radius: 8px;
   }
 
-  .profileImageContainer {
-    margin-bottom: 1.5rem;
-  }
-
-  .textSectionTitle {
+  .sectionTitle {
     font-size: 1.25rem;
-    padding-bottom: 0.5rem;
   }
 
-  .textSectionContent p {
+  .bioContent p {
     font-size: 0.9rem;
   }
 
@@ -237,16 +271,28 @@
     font-size: 1rem;
   }
 
+  .cvYear {
+    font-size: 0.95rem;
+  }
+
   .cvDescription {
     font-size: 0.85rem;
+  }
+
+  .cvList {
+    padding-left: 1.25rem;
   }
 
   .cvList::before {
     left: -0.5rem;
   }
 
+  .cvItem {
+    padding: 1rem;
+  }
+
   .cvItem::before {
-    left: -1.125rem;
+    left: -1.625rem;
     width: 10px;
     height: 10px;
   }
