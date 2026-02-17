@@ -135,6 +135,63 @@ export default function Home() {
                       preferencias de uso por parte de los/as participantes.
                     </span>
                   </li>
+                  <li className="cvItem">
+                    <span className="cvTitle">
+                      Escuela El Encanto, Puyehue (2022-2023)
+                    </span>
+                    <span className="cvDescription">
+                      Docente de Artes Visuales. Docente a cargo de la
+                      asignatura de artes visuales en Escuela Rural. Diseño y
+                      planificación de las clases acorde al contexto rural,
+                      promoviendo el uso de material reciclado y recursos
+                      locales. Valoración del patrimonio local y la integración
+                      de la historia del arte mediante actividades didácticas.
+                    </span>
+                  </li>
+                  <li className="cvItem">
+                    <span className="cvTitle">
+                      Colegio Creación Osorno (2022)
+                    </span>
+                    <span className="cvDescription">
+                      Docente encargada del taller extraprogramático de Artes.
+                      Desarrollo de las actividades del taller extra
+                      programático a ciclo básico y medio. Diseño y
+                      planificación del taller para fomentar las habilidades
+                      creativas en un ambiente flexible, ajustado a los
+                      intereses y necesidades de cada alumno/a. Observar y
+                      acompañar los procesos creativos individuales y
+                      colectivos, fomentando un espacio seguro y de
+                      comunicación.
+                    </span>
+                  </li>
+                  <li className="cvItem">
+                    <span className="cvTitle">
+                      Corporación Cultural Osorno (2021-2022)
+                    </span>
+                    <span className="cvDescription">
+                      Coordinación Artes Visuales. Encargada de las
+                      exhibiciones, mediaciones, promoción del área, contacto y
+                      gestión de las muestras. El área de artes visuales creció
+                      cuantitativamente en mediaciones culturales con
+                      establecimientos educaciones y comunidades locales, lo que
+                      también permitió estrechar los vínculos con las
+                      instituciones para posteriores visitas en otras áreas.
+                      Además, se realizaron convocatorias a artistas locales
+                      logrando una participación de artistas emergentes que cuya
+                      instancia culminó en una escuela de artes visuales.
+                    </span>
+                  </li>
+                  <li className="cvItem">
+                    <span className="cvTitle">
+                      Galería Réplica, Valdivia (2020)
+                    </span>
+                    <span className="cvDescription">
+                      Colaboración en archivo y plataforma web. Recopilación,
+                      organización y gestión de archivos artísticos e
+                      información en catálogos para la elaboración de página
+                      web.
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>
