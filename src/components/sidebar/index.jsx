@@ -28,6 +28,7 @@ export default function Sidebar() {
             { to: "/", text: "Bio" },
             { to: "/mediaciones", text: "Mediaciones" },
             { to: "/procesosFormativos", text: "Procesos Formativos" },
+            { to: "/proyectos", text: "Proyectos" },
             { to: "/curadurias", text: "Curadurias" },
             { to: "/trabajoArtistico", text: "Trabajo Artístico" },
             { to: "/publicaciones", text: "Publicaciones" },

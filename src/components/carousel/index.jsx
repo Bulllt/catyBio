@@ -14,14 +14,15 @@ export default function Carousel({ images }) {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef(null);
   const hasHoverEffect = images[0]?.hover === true;
+  const hasMultipleImages = images.length > 1;
 
   const startAutoPlay = useCallback(() => {
-    if (!emblaApi || !isAutoPlaying) return;
+    if (!emblaApi || !isAutoPlaying || !hasMultipleImages) return;
 
     autoPlayRef.current = setInterval(() => {
       emblaApi.scrollNext();
     }, 5000);
-  }, [emblaApi, isAutoPlaying, 5000]);
+  }, [emblaApi, isAutoPlaying, hasMultipleImages]);
 
   const stopAutoPlay = useCallback(() => {
     if (autoPlayRef.current) {
@@ -32,10 +33,10 @@ export default function Carousel({ images }) {
 
   const resetAutoPlay = useCallback(() => {
     stopAutoPlay();
-    if (isAutoPlaying) {
+    if (isAutoPlaying && hasMultipleImages) {
       startAutoPlay();
     }
-  }, [stopAutoPlay, startAutoPlay, isAutoPlaying]);
+  }, [stopAutoPlay, startAutoPlay, isAutoPlaying, hasMultipleImages]);
 
   useEffect(() => {
     const loadImages = () => {
@@ -147,12 +148,16 @@ export default function Carousel({ images }) {
           ))}
         </div>
 
-        <button className="carouselButton prev" onClick={scrollPrev}>
-          <FaChevronLeft />
-        </button>
-        <button className="carouselButton next" onClick={scrollNext}>
-          <FaChevronRight />
-        </button>
+        {hasMultipleImages && (
+          <>
+            <button className="carouselButton prev" onClick={scrollPrev}>
+              <FaChevronLeft />
+            </button>
+            <button className="carouselButton next" onClick={scrollNext}>
+              <FaChevronRight />
+            </button>
+          </>
+        )}
       </div>
     </div>
   );
